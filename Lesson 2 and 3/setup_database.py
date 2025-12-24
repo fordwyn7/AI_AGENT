@@ -1,11 +1,6 @@
 from database import db_manager, config
 
 def main():
-    print(f"Environment: {config.ENVIRONMENT}")
-    print(f"Database: {config.DB_NAME}")
-    print(f"Host: {config.DB_HOST}:{config.DB_PORT}")
-    print()
-    print("🔍 Testing database connection...")
     if not db_manager.test_connection():
         print("❌ Setup failed.")
         return
