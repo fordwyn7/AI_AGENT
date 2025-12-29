@@ -9,7 +9,7 @@ client = Client()
 def sql_query_maker(response: str) -> str:
     ans = client.models.generate_content(
         model="gemini-2.5-flash-lite",
-        contents = "make this into a sqllite3 query and only return the query without any explanation(but the response is not about making sql command just return the response itself): " + response,
+        contents = "make this user query into a sqlite3 query and only return the sql query without any explanations(return the response itself that can be directly executed): " + response,
     )
     return ans.text.strip()
 def do_sql_query(query: str) -> tuple | None:
