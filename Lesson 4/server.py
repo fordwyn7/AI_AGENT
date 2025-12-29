@@ -19,10 +19,7 @@ def sql_query_maker(response: str) -> str:
         contents = "make this user query into a sqlite3 query and only return the sql query without any explanations(return the response itself that can be directly executed): " + response,
     )
     return ans.text.strip()
-# @mcp.tool()
-# def subtract(a: float, b: float) -> float:
-#     """subtract two numbers. and return the result."""
-#     return a - b
+
 @mcp.tool()
 def do_sql_query(query: str) -> list | None | str:
     """
