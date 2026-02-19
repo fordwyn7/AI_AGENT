@@ -1,4 +1,3 @@
-# type: ignore
 import os
 from openai import AzureOpenAI
 from dotenv import load_dotenv

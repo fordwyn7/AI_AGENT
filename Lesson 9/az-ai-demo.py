@@ -1,4 +1,3 @@
-# type: ignore
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -23,7 +22,7 @@ from azure.search.documents.indexes import SearchIndexClient
 from azure.search.documents.indexes.models import SimpleField, SearchFieldDataType, SearchableField, ComplexField, CorsOptions, SearchIndex, ScoringProfile
 from typing import List
 
-# key = ""
+key = "ic02ge9qW3Db1VDRV2cHQOlbO6SoPTCgJ78XyncrY0AzSeCQ3XH6"
 client = SearchIndexClient(service_endpoint, AzureKeyCredential(key))
 name = "hotels"
 fields = [
